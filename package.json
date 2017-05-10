@@ -31,7 +31,6 @@
     "dox": "^0.8",
     "js-beautify": "^1.5.4",
     "lodash": "^4.0.1",
-    "should": "^10.0.0",
     "uglifyjs": "^2.4.10"
   },
   "devDependencies": {
@@ -39,7 +38,8 @@
     "blanket": "1.1.7",
     "bluebird": "^3.2.1",
     "mocha": "^2.4.5",
-    "mocha-spec-cov-alt": "^1.1.1"
+    "mocha-spec-cov-alt": "^1.1.1",
+    "should": "^10.0.0"
   },
   "config": {
     "blanket": {
