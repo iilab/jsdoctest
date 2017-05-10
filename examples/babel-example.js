@@ -1,5 +1,8 @@
 'use strict';
 
+import should from 'should';
+import _ from 'lodash';
+
 class HereIAm {
   /**
    * You do stuff
