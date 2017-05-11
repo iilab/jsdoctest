@@ -1,10 +1,22 @@
 #!/bin/bash -e
 for i in examples/*; do
   printf "$i..."
-  mocha --require . examples/helper.js $i > /dev/null
-  ecode=$?
+
+  if [[ $i == *"include-"* ]]; then
+    mocha --require . examples/helper.js $i > /dev/null
+    ecode=$?
+  else
+    if [[ $i == *"babel-"* ]]; then
+      mocha --require babel-register --require . $i > /dev/null
+      ecode=$?
+    else
+      mocha --include examples/helper.js --require . $i > /dev/null
+      ecode=$?
+    fi
+  fi
+
   if [[ $i == *"failing"* ]] || [[ $i == *"explosive"* ]] ||
-      [[ $i == *"explode"* ]] || [[ $i == *"returns-promise"* ]]; then
+      [[ $i == *"explode"* ]] || [[ $i == *"rejects-promise"* ]]; then
     if [[ $ecode == 0 ]]; then
       echo "Failure: $i"
       echo "Expected exitcode != 0, but saw $ecode"

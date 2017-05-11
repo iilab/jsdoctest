@@ -1,2 +1,2 @@
 'use strict';
-require('./explosive');
+require('./explosive-throw');
