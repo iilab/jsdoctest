@@ -1,5 +1,6 @@
 /**
  * @example
+ *
  *    takesCallback('something', cb)
  *    // async => 'something - here'
  */

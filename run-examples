@@ -15,7 +15,7 @@ for i in examples/*; do
     fi
   fi
 
-  if [[ $i == *"failing"* ]] || [[ $i == *"explosive"* ]] ||
+  if [[ $i == *"failing"* ]]  ||
       [[ $i == *"explode"* ]] || [[ $i == *"rejects-promise"* ]]; then
     if [[ $ecode == 0 ]]; then
       echo "Failure: $i"
