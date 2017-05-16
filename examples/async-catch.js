@@ -6,6 +6,5 @@
  *
  */
 function takesCallbackThrows(something, cb) {
-  new Error('bad things happen');
-  cb();
+  cb(new Error('bad things happen'));
 }

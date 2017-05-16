@@ -19,6 +19,28 @@ describe('jsdoctest/comment-parser', function() {
         { type: 'comment', string: 'single-line comment here', },
       ]);
     });
+
+    it('deals with multiple single line comments', function() {
+      commentParser.parseComments(
+        'function something() {'                  +
+        '/* multi-line comment here\n'            +
+        '                          */\n'          +
+        '}\n'                                     +
+        '// 1\n'                                  +
+        '// 2\n'                                  +
+        '// 3\n'                                  +
+        '\n'                                      +
+        'something() // single-line comment here'
+      ).should.eql([
+        { type: 'code', string: 'function something() {', },
+        { type: 'comment', string: 'multi-line comment here', },
+        { type: 'code', string: '}', },
+        { type: 'comment', string: '123', },
+        { type: 'code', string: 'something()', },
+        { type: 'comment', string: 'single-line comment here', },
+      ]);
+    });
+
   });
 
   describe('.parseExamples(parsedComments)', function() {
@@ -47,5 +69,23 @@ describe('jsdoctest/comment-parser', function() {
         },
       ]);
     });
+
+    it('handles multiline results', function() {
+      commentParser.parseExamples(commentParser.parseComments(
+        'map([1, 2, 3], function(x) {\n' +
+        '  return x + 10\n'  +
+        '});\n' +
+        '// => [11,\n' +
+        '//     12,\n' +
+        '//     13]\n'
+      )).should.eql([
+        {
+          displayTestCase: 'map([1, 2, 3], function(x) {;  return x + 10;})',
+          testCase: 'map([1, 2, 3], function(x) {\n  return x + 10\n})',
+          expectedResult: '[11,12,13]',
+        },
+      ]);
+    });
+
   });
 });
