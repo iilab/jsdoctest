@@ -37,6 +37,7 @@ describe('jsdoctest/mocha', function() {
       mocha.loadDoctests(mockModule, path.join(__dirname, 'test-file-captioned.js'));
 
       function onCompile(content, filename) {
+        // console.log('content', content)
         content.should.containEql(
         '\ndescribe(\'add()\', function() {' +
             'it(\'add(1, 2) - Integers\', function() {' +

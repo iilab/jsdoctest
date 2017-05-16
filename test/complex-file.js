@@ -8,12 +8,6 @@
  *   });
  *   // async => 'something else'
  *
- *   createResource()
- *     .then(function(ret) {
- *       assert(ret === 'something');
- *       return 'something else'
- *     });
- *   // async => 'something else'
  */
 
 function createResource() {
