@@ -2,7 +2,7 @@ var Promise = require('bluebird');
 
 /**
  * @example
- *   rejectsAPromise() // async => 'doesn\'t matter'
+ *   rejectsAPromise() // ~!> 'doesn\'t matter'
  */
 
 function rejectsAPromise() {

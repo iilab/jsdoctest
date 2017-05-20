@@ -3,23 +3,23 @@ if (typeof describe != undefined) var assert = require('assert');
 /**
  * @example
  *   createResource();
- *   // async => 'something'
+ *   // ~> 'something'
  *
  *   createResource().then(() => {
  *     return 'something else'
  *   });
- *   // async => 'something else'
+ *   // ~> 'something else'
  *
  *   createResource()
  *     .then(function(ret) {
  *       assert(ret === 'something');
  *       return 'something else'
  *     });
- *   // async => 'something else'
+ *   // ~> 'something else'
  */
 
 function createResource() {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     resolve('something');
   });
 }

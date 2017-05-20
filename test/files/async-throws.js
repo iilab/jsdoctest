@@ -2,9 +2,11 @@
  * @example
  *
  *    takesCallbackThrows('something', cb)
- *    // async !> 'bad things happen'
+ *    // async !> 'whatever'
  *
  */
+
 function takesCallbackThrows(something, cb) {
-  cb(new Error('bad things happen'));
+  throw new Error('bad things happen');
+  cb();
 }

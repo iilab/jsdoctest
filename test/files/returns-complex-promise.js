@@ -1,8 +1,8 @@
-var Promise = require('bluebird');
-
 /**
  * @example
- *   resolvesAPromise() // async => 10
+ *   resolvesAPromise()
+ *    .then(() => resolvesAPromise())
+ *    // ~> 10
  */
 
 function resolvesAPromise() {

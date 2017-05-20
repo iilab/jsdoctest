@@ -2,9 +2,7 @@ var Promise = require('bluebird');
 
 /**
  * @example
- *   resolvesAPromise()
- *    .then(() => resolvesAPromise())
- *    // ~> 10
+ *   resolvesAPromise() // ~> 10
  */
 
 function resolvesAPromise() {

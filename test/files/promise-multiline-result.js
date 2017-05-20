@@ -1,12 +1,10 @@
-if (typeof describe != undefined) var assert = require('assert');
-
 /**
  * @example
  *
  *  createResource().then(() => {
  *    return { a: 1, b: 'something else'}
  *  });
- *  // async => {
+ *  // ~> {
  *  //   a: 1,
  *  //   b: 'something else'
  *  // }
@@ -14,7 +12,7 @@ if (typeof describe != undefined) var assert = require('assert');
  *  createResource().then(() => {
  *    return { a: 1, b: 'https://yo.org'}
  *  });
- *  // async => {
+ *  // ~> {
  *  //   "a": 1,
  *  //   "b": 'https://yo.org'
  *  // }
@@ -22,7 +20,7 @@ if (typeof describe != undefined) var assert = require('assert');
  */
 
 function createResource() {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     resolve('something');
   });
 }

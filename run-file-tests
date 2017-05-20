@@ -1,11 +1,11 @@
 #!/bin/bash
 set -uo pipefail
 IFS=$'\n\t'
-for i in examples/*; do
+for i in test/files/*; do
   printf "$i..."
 
   if [[ $i == *"promise"* ]]; then
-    mocha --include examples/helper-promises.js --require . $i > /dev/null
+    mocha --include test/helpers/helper-promises.js --require . $i > /dev/null
     ecode=$?
   else
     if [[ $i == *"babel-"* ]]; then
@@ -13,7 +13,7 @@ for i in examples/*; do
       ecode=$?
     else
       if [[ $i != *"helper"* ]]; then
-        mocha --include examples/helper.js --require . $i > /dev/null
+        mocha --include test/helpers/helper.js --require . $i > /dev/null
         ecode=$?
       else
         printf " skip helper\n"
