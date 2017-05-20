@@ -61,9 +61,7 @@ describe('jsdoctest/mocha', function() {
       mocha.loadDoctests(mockModule, path.join(__dirname, './complex-file.js'));
 
       function onCompile(content, filename) {
-        content.should.containEql(
-          "/**\n * @example\n *   createResource();\n *   // async => 'something'\n *\n *   createResource().then(() => {\n *     return 'something else'\n *   });\n *   // async => 'something else'\n *\n */\n\nfunction createResource() {\n  return new Promise(resolve => {\n    resolve('something');\n  });\n}\ndescribe('test/complex-file', function() {\ndescribe('createResource()', function() {it('createResource()', function() {\nvar returnError,returnValue;function cb(err, result) {returnError=err;returnValue=result;};function returnFunction() { createResource()};expect(returnFunction).to.not.Throw();expect(returnValue).to.eql('something');});\nit('createResource().then(() => {;    return \\'something else\\';  })', function() {\nvar returnError,returnValue;function cb(err, result) {returnError=err;returnValue=result;};function returnFunction() { createResource().then(() => {\n    return 'something else'\n  })};expect(returnFunction).to.not.Throw();expect(returnValue).to.eql('something else');});});});"
-        );
+        content.should.containEql("returnFunction.should.not.Throw();returnValue.should.eql('something else')");
         called = true;
         filename.should.equal(path.join(__dirname, 'complex-file.js'));
       }
