@@ -1,6 +1,7 @@
 #!/bin/bash
 set -uo pipefail
 IFS=$'\n\t'
+trap "echo Exited!; exit;" SIGINT SIGTERM
 for i in test/files/*; do
   printf "$i..."
 
