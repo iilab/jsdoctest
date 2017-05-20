@@ -1,4 +1,4 @@
-'use strict'; /* global describe, it */
+'use strict' /* global describe, it */;
 var path = require('path');
 var should = require('should');
 var mocha = require('../lib/mocha');
@@ -14,13 +14,7 @@ describe('jsdoctest/mocha', function() {
       mocha.loadDoctests(mockModule, path.join(__dirname, 'test-file.js'));
 
       function onCompile(content, filename) {
-        content.should.containEql(
-        '\ndescribe(\'add()\', function() {' +
-            'it(\'add(1, 2)\', function() {' +
-              '(add(1, 2)).should.eql(3);' +
-            '});' +
-          '});'
-        );
+        content.should.containEql("\ndescribe('add()', function() {" + "it('add(1, 2)', function() {" + '(add(1, 2)).should.eql(3);' + '});' + '});');
         called = true;
         filename.should.equal(path.join(__dirname, 'test-file.js'));
       }
@@ -39,17 +33,17 @@ describe('jsdoctest/mocha', function() {
       function onCompile(content, filename) {
         // console.log('content', content)
         content.should.containEql(
-        '\ndescribe(\'add()\', function() {' +
-            'it(\'add(1, 2) - Integers\', function() {' +
-              '(add(1, 2)).should.eql(3);' +
+          "\ndescribe('add()', function() {" +
+            "it('add(1, 2) - Integers', function() {" +
+            '(add(1, 2)).should.eql(3);' +
             '});\n' +
-            'it(\'add(3, 2) - Integers\', function() {' +
-              '(add(3, 2)).should.eql(5);' +
+            "it('add(3, 2) - Integers', function() {" +
+            '(add(3, 2)).should.eql(5);' +
             '});\n' +
-            'it(\'add(1.5, 2.5) - Doubles\', function() {' +
-              '(add(1.5, 2.5)).should.eql(4);' +
+            "it('add(1.5, 2.5) - Doubles', function() {" +
+            '(add(1.5, 2.5)).should.eql(4);' +
             '});' +
-          '});'
+            '});'
         );
         called = true;
         filename.should.equal(path.join(__dirname, 'test-file-captioned.js'));
@@ -68,9 +62,7 @@ describe('jsdoctest/mocha', function() {
 
       function onCompile(content, filename) {
         content.should.containEql(
-          'var returnValue = createResource().then(() => {\n' +
-          '    return \'something else\'\n' +
-          '  });if(returnValue && returnValue.then && typeof returnValue.then === \'function\') {return returnValue.then(cb.bind(null, null), cb);}});'
+          "/**\n * @example\n *   createResource();\n *   // async => 'something'\n *\n *   createResource().then(() => {\n *     return 'something else'\n *   });\n *   // async => 'something else'\n *\n */\n\nfunction createResource() {\n  return new Promise(resolve => {\n    resolve('something');\n  });\n}\ndescribe('test/complex-file', function() {\ndescribe('createResource()', function() {it('createResource()', function() {\nvar returnError,returnValue;function cb(err, result) {returnError=err;returnValue=result;};function returnFunction() { createResource()};expect(returnFunction).to.not.Throw();expect(returnValue).to.eql('something');});\nit('createResource().then(() => {;    return \\'something else\\';  })', function() {\nvar returnError,returnValue;function cb(err, result) {returnError=err;returnValue=result;};function returnFunction() { createResource().then(() => {\n    return 'something else'\n  })};expect(returnFunction).to.not.Throw();expect(returnValue).to.eql('something else');});});});"
         );
         called = true;
         filename.should.equal(path.join(__dirname, 'complex-file.js'));
