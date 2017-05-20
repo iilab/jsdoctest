@@ -61,7 +61,9 @@ describe('jsdoctest/mocha', function() {
       mocha.loadDoctests(mockModule, path.join(__dirname, './complex-file.js'));
 
       function onCompile(content, filename) {
-        content.should.containEql("returnFunction.should.not.Throw();returnValue.should.eql('something else')");
+        content.should.containEql(
+          "function(done) {\nvar returnError,returnValue;function cb(err, result) {  result.should.eql('something else'  );done()};function returnFunction() { createResource().then(() => {\n    return 'something else'\n  })};returnFunction.should.not.Throw();"
+        );
         called = true;
         filename.should.equal(path.join(__dirname, 'complex-file.js'));
       }
