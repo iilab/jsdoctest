@@ -9,7 +9,7 @@
     "test": "JSDOCTEST_DISABLE=true mocha --require blanket -R mocha-spec-cov-alt && bash run-file-tests",
     "coverage": "JSDOCTEST_DISABLE=true mocha --require blanket -R html-cov > coverage.html"
   },
-  "pre-push": [ "test", "coverage"]
+  "pre-push": [ "test", "coverage"],
   "repository": {
     "type": "git",
     "url": "git://github.com/yamadapc/jsdoctest.git"
