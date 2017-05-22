@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">49.21% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>31/63</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.37% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">49.21% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>31/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+var fs = require('fs');
+var path = require('path');
+var dox = require('dox');
+var _ = require('lodash');
+var commentParser = require('./comment-parser');
+var getExampleCode = require('./get-example-code');
+var util = require('./util');
+&nbsp;
+var escapeString = getExampleCode.escapeString;
+&nbsp;
+var JSDOCTEST_DISABLE = process.env.JSDOCTEST_DISABLE || <span class="branch-1 cbranch-no" title="branch not covered" >false;</span>
+&nbsp;
+/**
+ * Runs jsdoctests in some file, and reports the results to the command-line.
+ */
+&nbsp;
+exports.run = function <span class="fstat-no" title="function not covered" >jsdoctest$run(</span>filename) {
+  var content = <span class="cstat-no" title="statement not covered" >fs.readFileSync(filename, 'utf8');</span>
+<span class="cstat-no" title="statement not covered" >  console.log('jsdoctest$run.filename', filename);</span>
+&nbsp;
+  var jsdocTests = <span class="cstat-no" title="statement not covered" >exports.getJsdoctests(content);</span>
+<span class="cstat-no" title="statement not covered" >  content += _.map(jsdocTests, exports.toJsdocRegister).join('');</span>
+<span class="cstat-no" title="statement not covered" >  global.__registerTest = exports.registerTest;</span>
+<span class="cstat-no" title="statement not covered" >  module._compile(util.stripBOM(content), filename);</span>
+<span class="cstat-no" title="statement not covered" >  delete global.__registerTest;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return exports.runRegistered();</span>
+};
+&nbsp;
+/**
+ * Parses "jsdoctests" out of a file's contents and returns them. These are
+ * `dox` outputted `comment` nodes, overloaded with an `examples` field which
+ * adds `testCase` and `expectedResult` pairs to them.
+ */
+&nbsp;
+exports.getJsdoctests = function jsdoctest$getJsdoctests(content) {
+  var parsedContent = dox.parseComments(content);
+  var functionComments = _.filter(parsedContent, function(c) {
+    return (
+      (c.ctx &amp;&amp; (c.ctx.type === 'method' || c.ctx.type === 'function')) ||
+      (<span class="branch-3 cbranch-no" title="branch not covered" >c.tags </span>&amp;&amp;
+        (<span class="branch-4 cbranch-no" title="branch not covered" >c.tags</span>
+          .map(<span class="fstat-no" title="function not covered" >fu</span>nction(tag) {
+<span class="cstat-no" title="statement not covered" >            return tag.type;</span>
+          })
+          .includes('function') ||
+<span class="branch-5 cbranch-no" title="branch not covered" >          c.tags</span>
+            .map(<span class="fstat-no" title="function not covered" >fu</span>nction(tag) {
+<span class="cstat-no" title="statement not covered" >              return tag.type;</span>
+            })
+            .includes('method') ||
+<span class="branch-6 cbranch-no" title="branch not covered" >          c.tags</span>
+            .map(<span class="fstat-no" title="function not covered" >fu</span>nction(tag) {
+<span class="cstat-no" title="statement not covered" >              return tag.type;</span>
+            })
+            .includes('func')))
+    );
+  });
+&nbsp;
+  var comments = _.map(functionComments, function(comment) {
+    var exampleNodes = _.filter(comment.tags, { type: 'example' });
+    var examples = _.flatten(
+      _.map(exampleNodes, function(exampleNode) {
+        return commentParser.run(exampleNode.string);
+      })
+    );
+&nbsp;
+    var overrideTags = _.filter(comment.tags, { type: 'function' });
+    var override = _.flatten(
+      _.map(overrideTags, <span class="fstat-no" title="function not covered" >fu</span>nction(overrideTag) {
+<span class="cstat-no" title="statement not covered" >        return overrideTag.string;</span>
+      })
+    );
+    comment.ctx = comment.ctx ? comment.ctx : <span class="branch-1 cbranch-no" title="branch not covered" >{ string: override.join(' ') };</span>
+    comment.examples = examples;
+    return examples.length ? comment : <span class="branch-1 cbranch-no" title="branch not covered" >undefined;</span>
+  });
+&nbsp;
+  var ret = _.compact(comments);
+  ret.source = parsedContent;
+  return ret;
+};
+&nbsp;
+var tests = [];
+&nbsp;
+/**
+ * Registers a test case to be run by the runner
+ */
+&nbsp;
+exports.registerTest = function <span class="fstat-no" title="function not covered" >jsdoctest$registerTest(</span>id, fn) {
+<span class="cstat-no" title="statement not covered" >  tests.push({</span>
+    id: id,
+    fn: fn
+  });
+};
+&nbsp;
+/**
+ * Runs test cases accumulated in the `tests` array.
+ */
+&nbsp;
+exports.runRegistered = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+  var failed = <span class="cstat-no" title="statement not covered" >false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  _.each(tests, <span class="fstat-no" title="function not covered" >fu</span>nction(test) {</span>
+<span class="cstat-no" title="statement not covered" >    console.log(test.id);</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      test.fn();</span>
+    } catch (err) {
+<span class="cstat-no" title="statement not covered" >      console.error(err.toString());</span>
+<span class="cstat-no" title="statement not covered" >      failed = true;</span>
+    }
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return failed;</span>
+};
+&nbsp;
+/**
+ * Compiles a jsdoc comment `dox` comment overloaded with the `examples` node to
+ * the internal test suite registering code.
+ */
+&nbsp;
+exports.toJsdocRegister = function <span class="fstat-no" title="function not covered" >jsdoctest$toJsdocRegister(</span>comment) {
+  var baseId = <span class="cstat-no" title="statement not covered" >comment.ctx.name + ' - ';</span>
+  var compiled = <span class="cstat-no" title="statement not covered" >_.map(comment.examples, <span class="fstat-no" title="function not covered" >fu</span>nction(example) {</span>
+    var id = <span class="cstat-no" title="statement not covered" >escapeString(baseId) + escapeString(example.testCase) + ' =&gt; ' + escapeString(example.expectedResult);</span>
+    var fn = <span class="cstat-no" title="statement not covered" >'function() {' + example.testCode + '}';</span>
+<span class="cstat-no" title="statement not covered" >    return "__registerTest('" + id + "', " + fn + ');';</span>
+  }).join('');
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return '\n' + compiled;</span>
+};
+&nbsp;
+// Mocha `--require` support:
+<span class="missing-if-branch" title="if path not taken" >I</span>if (path.basename(process.argv[1]) === '_mocha' &amp;&amp; !JSDOCTEST_DISABLE) {
+  var mocha = <span class="cstat-no" title="statement not covered" >require('./mocha');</span>
+  // Avoid circular require weirdness
+<span class="cstat-no" title="statement not covered" >  if (module.parent.exports === mocha) {</span>
+    // We could just always delete the cache, but I think this is clearer and
+    // shows explicitly what the circular problem is
+<span class="cstat-no" title="statement not covered" >    delete require.cache[path.join(__dirname, 'mocha.js')];</span>
+<span class="cstat-no" title="statement not covered" >    mocha = require('./mocha');</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  mocha.toggleDoctestInjection();</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 22 2017 12:16:42 GMT+0200 (CEST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

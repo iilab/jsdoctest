@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for mocha.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> mocha.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.52% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>38/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.17% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>17/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.23% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>38/69</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+var fs = require('fs');
+var path = require('path');
+var _ = require('lodash');
+var jsdoctest = require('./index');
+var getExampleCode = require('./get-example-code');
+var util = require('./util');
+&nbsp;
+var escapeString = getExampleCode.escapeString;
+var babel = require('babel-core');
+var mm = require('multimatch');
+&nbsp;
+let mocha_args, mocha_includes, mocha_excludes, mocha_delayed;
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (process.env.LOADED_MOCHA_OPTS &amp;&amp; !process.env.JSDOCTEST_DISABLE) {
+  var program = <span class="cstat-no" title="statement not covered" >require('commander');</span>
+  function <span class="fstat-no" title="function not covered" >collect(</span>val, memo) {
+<span class="cstat-no" title="statement not covered" >    memo.push(val);</span>
+<span class="cstat-no" title="statement not covered" >    return memo;</span>
+  }
+&nbsp;
+  /**
+   * Introduce a new --include CLI parameter for mocha + jsdoctest for helpers
+   * able to run before, beforeEach, after and afterEach hooks.
+   *
+   */
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  program.option('--include [value]', '', collect, []);</span>
+&nbsp;
+  // This works:
+  // NODE_ENV=test mocha --colors --require babel-register --include test/helper.js --require jsdoctest 'src/**/*.js' '!src/utils/*' '!src/service.js' '!src/test/*' '!src/**/test/*'
+  // But outputs warnings
+  // Warning: Could not find any test files matching pattern: !src/utils/*
+  // Warning: Could not find any test files matching pattern: !src/service.js
+  // Warning: Could not find any test files matching pattern: !src/test/*
+  // Warning: Could not find any test files matching pattern: !src/**/test/*
+&nbsp;
+  // Trying to make this work:
+  // NODE_ENV=test mocha --colors --require babel-register --include test/helper.js --exclude 'src/utils/*' --exclude 'src/service.js' --exclude 'src/**/test/*' --require jsdoctest 'src/**/*.js'
+<span class="cstat-no" title="statement not covered" >  program.option('--exclude [value]', '', collect, []);</span>
+<span class="cstat-no" title="statement not covered" >  program.option('--delay');</span>
+<span class="cstat-no" title="statement not covered" >  program.parse(process.argv);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  mocha_delayed = program.delay;</span>
+<span class="cstat-no" title="statement not covered" >  mocha_includes = program.include;</span>
+<span class="cstat-no" title="statement not covered" >  mocha_excludes = program.exclude;</span>
+<span class="cstat-no" title="statement not covered" >  mocha_args = program.args;</span>
+  // console.log('mocha_args', mocha_args);
+  // console.log('process.argv', process.argv);
+  // console.log('LOADED_MOCHA_OPTS', process.env.LOADED_MOCHA_OPTS);
+}
+&nbsp;
+/**
+ * Mocks `mocha`'s register environment for doctest mocha integration. This
+ * works in the same manner `coffee-script/register` or `mocha --require
+ * blanket` work.
+ *
+ * @todo Do not always run babel.
+ *
+ */
+&nbsp;
+exports.loadDoctests = function loadDoctests(module, filename) {
+  var rootDir = process.cwd();
+&nbsp;
+  var content = fs.readFileSync(filename, 'utf8');
+  // console.log('loadDoctests.filename', filename);
+  // console.log('loadDoctests.module', module);
+  // console.log('__filename', __filename);
+  // console.log('__dirname', __dirname);
+&nbsp;
+  var mochaSpec = exports.contentsToMochaSpec(rootDir, filename, content);
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (mochaSpec === null) {
+<span class="cstat-no" title="statement not covered" >    return module._compile(util.stripBOM(babel.transformFileSync(filename).code), filename);</span>
+  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (mm(path.relative(process.cwd(), filename), mocha_excludes).length &gt; 0) {
+<span class="cstat-no" title="statement not covered" >    return;</span>
+  }
+  var includes = _.map(mocha_includes, <span class="fstat-no" title="function not covered" >fu</span>nction(include) {
+<span class="cstat-no" title="statement not covered" >    return babel.transformFileSync(path.join(process.cwd(), include)).code;</span>
+  }).join('\n');
+&nbsp;
+  var delayed_mochaSpec = mocha_delayed ? <span class="branch-0 cbranch-no" title="branch not covered" >includes + '\nsetTimeout(function() {' + mochaSpec + '\nrun();}, 0);' </span>: includes + mochaSpec;
+&nbsp;
+  // console.log('_compile: ' + filename + '\n');
+  //
+  // console.log(
+  //   '_compile.delayed_mochaSpec: ' + filename + '\n',
+  //   util.stripBOM(delayed_mochaSpec)
+  // );
+  //
+  // console.log(
+  //   '_compile.code: ' + filename + '\n',
+  //   util.stripBOM(babel.transformFileSync(filename).code)
+  // );
+&nbsp;
+  module._compile(util.stripBOM(babel.transformFileSync(filename).code + delayed_mochaSpec), filename);
+};
+&nbsp;
+/**
+ * Compiles a string containing the contents of a JSDoc annotated file and
+ * outputs the generated mocha spec for its JSDocTests.
+ */
+&nbsp;
+exports.contentsToMochaSpec = function contentsToMochaSpec(rootDir, filename, content) {
+  var comments = jsdoctest.getJsdoctests(content);
+&nbsp;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (
+    _.map(comments, function(comment) {
+      return comment.examples;
+    }).length == 0
+  )
+<span class="cstat-no" title="statement not covered" >    return null;</span>
+  var moduleName = exports._getModuleName(rootDir, filename, comments.source);
+&nbsp;
+  return (
+    "\ndescribe('" +
+    escapeString(moduleName) +
+    "', function() {" +
+    _.map(_.compact(comments), function(comment) {
+      return exports.commentToMochaSpec(comment);
+    }).join('') +
+    '});'
+  );
+};
+&nbsp;
+/**
+ * Compiles a jsdoc comment parsed by `dox` and its doctest examples into a
+ * mocha spec.
+ */
+&nbsp;
+exports.commentToMochaSpec = function commentToMochaSpec(comment) {
+  var ctx = comment.ctx || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+  return (
+    "\ndescribe('" +
+    escapeString(ctx.string) +
+    "', function() {" +
+    _.map(comment.examples, function(example) {
+      return (
+        "it('" +
+        escapeString(example.label || example.displayTestCase) +
+        "', function(" +
+        // '' +
+        (example.isAsync || example.isAsyncError ? 'done' : '') +
+        ') {' +
+        getExampleCode(example) +
+        '});'
+      );
+    }).join('\n') +
+    '});'
+  );
+};
+&nbsp;
+var originalLoad;
+&nbsp;
+/**
+ * Toggles doctest injection into loaded modules. That is: doctests will be
+ * compiled into modules as mocha specs, whenever they're declared.
+ *
+ * HACK: Only inject in files declared to mocha as arguments
+ *
+ */
+&nbsp;
+exports.toggleDoctestInjection = function <span class="fstat-no" title="function not covered" >toggleDoctestInjection(</span>) {
+<span class="cstat-no" title="statement not covered" >  if (originalLoad) {</span>
+<span class="cstat-no" title="statement not covered" >    require.extensions['.js'] = originalLoad;</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    originalLoad = originalLoad || require.extensions['.js'];</span>
+<span class="cstat-no" title="statement not covered" >    require.extensions['.js'] = <span class="fstat-no" title="function not covered" >fu</span>nction(module, filename) {</span>
+      // console.log('require.extensions[.js]' + filename, filename);
+<span class="cstat-no" title="statement not covered" >      if (filename.match(/node_modules/)) {</span>
+<span class="cstat-no" title="statement not covered" >        return originalLoad(module, filename);</span>
+        // } else if (filename.match(/test\/doc\/helper.js/)) {
+        //   // console.log('&gt;&gt;&gt; helper!');
+        //   return originalLoad(module, filename);
+      } else <span class="cstat-no" title="statement not covered" >if (mm(path.relative(process.cwd(), filename), mocha_excludes).length &gt; 0) {</span>
+        // console.log('&gt;&gt;&gt; ignore! ' + filename, mocha_args);
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (</span>
+        mm(path.relative(process.cwd(), filename), mocha_excludes).length == 0 &amp;&amp;
+        (mm(path.relative(process.cwd(), filename), mocha_args).length &gt; 0 || mm(filename, mocha_args).length &gt; 0)
+      ) {
+        // console.log('&gt;&gt;&gt; match! ' + filename, mocha_args);
+        // Only load doc tests for files matching the passed mocha args.
+        // Should be only for the currently ran mocha file
+<span class="cstat-no" title="statement not covered" >        return exports.loadDoctests(module, filename);</span>
+      }
+&nbsp;
+      // Do not follow other required dependencies
+&nbsp;
+      // console.log('&gt;&gt;&gt; toggleDoctestInjection !!!!filename', filename);
+      // console.log('originalLoad', originalLoad);
+<span class="cstat-no" title="statement not covered" >      return originalLoad(module, filename);</span>
+    };
+  }
+};
+&nbsp;
+/**
+ * Resolves the expected module name for a given file, to use as the top-level
+ * spec when generating mocha doctest `describes`
+ *
+ * @param {String} The root directory
+ * @param {String} The module's filename
+ * @return {String} moduleName
+ */
+&nbsp;
+exports._getModuleName = function getModuleName(rootDir, filename, parsedContent) {
+  var moduleBlock = _.find(parsedContent, function(block) {
+    return block.tags &amp;&amp; _.find(block.tags, { type: 'module' });
+  });
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (moduleBlock) {
+    var moduleTag = <span class="cstat-no" title="statement not covered" >_.find(moduleBlock.tags, { type: 'module' });</span>
+<span class="cstat-no" title="statement not covered" >    if (moduleTag &amp;&amp; moduleTag.string) {</span>
+      var smoduleTag = <span class="cstat-no" title="statement not covered" >moduleTag.string.split(' ');</span>
+<span class="cstat-no" title="statement not covered" >      if (smoduleTag[0].charAt(0) === '{' &amp;&amp; !!smoduleTag[1]) <span class="cstat-no" title="statement not covered" >return smoduleTag[1];</span></span>
+      else <span class="cstat-no" title="statement not covered" >if (!!smoduleTag[0]) <span class="cstat-no" title="statement not covered" >return smoduleTag[0];</span></span>
+    }
+  }
+&nbsp;
+  var filenamePrime = path.relative(rootDir, filename);
+  return stripExtension(filenamePrime);
+&nbsp;
+  function stripExtension(f) {
+    return f.replace(/\..+$/, '');
+  }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 22 2017 12:16:42 GMT+0200 (CEST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
