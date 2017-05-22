@@ -23,7 +23,7 @@ for i in test/files/*; do
     fi
   fi
 
-  if [[ $i == *"failing"* ]] || [[ $i == *"explode"* ]] || [[ $i == *"throws"* ]]; then
+  if [[ $i == *"failing"* ]] || [[ $i == *"explode"* ]] || [[ $i == *"throw"* ]]; then
     if [[ $ecode == 0 ]]; then
       echo "Failure: $i"
       echo "Expected exitcode != 0, but saw $ecode"
