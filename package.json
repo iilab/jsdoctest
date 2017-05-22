@@ -7,7 +7,7 @@
   "scripts": {
     "bin": "./bin/jsdoctest",
     "test": "JSDOCTEST_DISABLE=true mocha --require blanket -R mocha-spec-cov-alt && bash run-file-tests",
-    "coverage": "JSDOCTEST_DISABLE=true nyc report --reporter=lcov mocha"
+    "coverage": "JSDOCTEST_DISABLE=true nyc --reporter=lcov mocha"
   },
   "pre-push": [
     "test",
